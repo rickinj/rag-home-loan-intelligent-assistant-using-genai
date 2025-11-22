@@ -146,11 +146,13 @@ EMAIL_PORT=
 streamlit run app.py
 ```
 ## 🧪 Flows Supported
-  ✔ EMI Flow
+✔ EMI Flow
    - User → Principal → Tenure → ROI → EMI Summary → Eligibility? <br>
-  ✔ Eligibility Flow
+   
+✔ Eligibility Flow
    - Income → Expense → Job Type → DOB → Pincode → Loan Type → Name → Phone → Email → OTP → Result <br>
-  ✔ RAG Flow
+   
+✔ RAG Flow
    - Any policy question → PDF-backed response
   
 ---
