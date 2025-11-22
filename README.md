@@ -93,17 +93,27 @@ Tables created:
 project/
 │
 ├── app.py # Streamlit front-end app
+│
 ├── agent.py # Main conversation state machine
+│
 ├── llm_services.py # Gemini & LangChain logic
+│
 ├── rag_processor.py # PDF loading, embedding, FAISS
+│
 ├── utils.py # Helpers: OTP, EMI, sanction, BQ
+│
 ├── prompts.py # Intent, RAG & persona prompts
+│
 ├── config.py # Model + PDF + embedding config
+│
 ├── rag_cleanup.py # Resets BigQuery tables
+│
 ├── intent.json # Intent definition file
 │
 ├── docs/ # RAG documents (pricing grid, policy, etc.)
+│
 ├── .env # Credentials & keys
+│
 └── README.md
 
 ```
@@ -112,10 +122,10 @@ project/
 
 ## ⚙️ Installation
 
-### 1️⃣ Install dependencies
+### 1️⃣ Install dependencies ((If FAISS fails on Windows → replace with faiss-cpu): 
 ```bash
 pip install streamlit langchain langchain-google-genai google-auth google-auth-oauthlib google-cloud-bigquery faiss-cpu python-dotenv PyPDF2
-(If FAISS fails on Windows → replace with faiss-cpu)
+
 ```
 
 ### 2️⃣ Environment Variables (Create a .env file):
@@ -137,10 +147,50 @@ streamlit run app.py
 ```
 ## 🧪 Flows Supported
   ✔ EMI Flow
-   - User → Principal → Tenure → ROI → EMI Summary → Eligibility?
+   - User → Principal → Tenure → ROI → EMI Summary → Eligibility? <br>
   ✔ Eligibility Flow
-   - Income → Expense → Job Type → DOB → Pincode → Loan Type → Name → Phone → Email → OTP → Result
+   - Income → Expense → Job Type → DOB → Pincode → Loan Type → Name → Phone → Email → OTP → Result <br>
   ✔ RAG Flow
    - Any policy question → PDF-backed response
   
 ---
+
+## 📦 BigQuery Table Schemas
+
+### **1. `tbl_conversation`**
+
+| Column        | Type     |
+|---------------|----------|
+| session_id    | INT64    |
+| conversation  | STRING   |
+| time_stamp    | DATETIME |
+
+---
+
+### **2. `tbl_extracted_data`**
+
+| Column        | Type     |
+|---------------|----------|
+| session_id    | INT64    |
+| customer_name | STRING   |
+| email         | STRING   |
+| phone_number  | STRING   |
+| extracted_data| STRING   |
+
+---
+
+## 💡 Highlights / Advantages
+
+- Multi-step agent with memory  
+- Flow-safe input validation (LLM + regex fallback)  
+- Hybrid RAG + reasoning model  
+- Fully structured BigQuery logging  
+- Clean integration with Streamlit UI  
+- Modular and easy to extend  
+
+---
+
+## 🤝 Contributions
+
+PRs and improvements are welcome.
+
