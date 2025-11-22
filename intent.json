@@ -1,0 +1,80 @@
+{
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": ["hi", "hello", "good morning", "hey there"]
+    },
+    {
+      "intent": "start_emi",
+      "examples": [
+        "calculate emi",
+        "i want to check my emi",
+        "1",
+        "emi",
+        "what's my monthly payment",
+        "emi calculator"
+      ]
+    },
+    {
+      "intent": "start_eligibility",
+      "examples": [
+        "check eligibility",
+        "how much loan can i get",
+        "2",
+        "eligibility",
+        "am i eligible",
+        "soft sanction"
+      ]
+    },
+    {
+      "intent": "ask_rag",
+      "examples": [
+        "ask a question",
+        "3",
+        "policy",
+        "what are the loan policies",
+        "tell me about processing fees",
+        "what documents are needed"
+      ]
+    },
+    {
+      "intent": "provide_data",
+      "examples": [
+        "50000",
+        "10 lakhs",
+        "5 years",
+        "8.5%",
+        "pune",
+        "411001",
+        "salaried",
+        "1990-01-15",
+        "fresh loan"
+      ]
+    },
+    {
+      "intent": "provide_phone",
+      "examples": ["9876543210", "my number is 8888888888"]
+    },
+    {
+      "intent": "provide_otp",
+      "examples": ["123456", "the otp is 990011"]
+    },
+    {
+      "intent": "affirmative",
+      "examples": ["yes", "yup", "sure", "ok", "proceed", "sounds good"]
+    },
+    {
+      "intent": "negative",
+      "examples": ["no", "nope", "not now", "cancel", "stop"]
+    },
+    {
+      "intent": "out_of_domain",
+      "examples": [
+        "what about a credit card",
+        "open a savings account",
+        "tell me about mutual funds",
+        "what's the weather"
+      ]
+    }
+  ]
+}
