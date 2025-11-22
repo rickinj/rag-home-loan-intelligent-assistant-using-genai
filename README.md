@@ -132,8 +132,6 @@ This is the path to your **Google Cloud Service Account JSON key**, used for Big
 
 13. Add this into your `.env`: GOOGLE_APPLICATION_CREDENTIALS=credentials/service_account.json
 
-14. Make sure `.gitignore` contains:
-
 # 2️⃣ Generate `SENDER_APP_PASSWORD` (Gmail App Password)
 
 This password is required for sending OTP emails from your Gmail account.
@@ -157,7 +155,7 @@ https://myaccount.google.com/apppasswords
 
 6. Copy the 16-character password (Google shows it once)
 
-7. Add it to your `.env`:
+7. Add it to your `.env`: SENDER_APP_PASSWORD=your_generated_app_password.
 
 8. **Never commit this password to GitHub.**
 
