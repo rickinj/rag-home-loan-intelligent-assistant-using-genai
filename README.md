@@ -95,8 +95,6 @@ This project requires two sensitive credentials:
 Because these contain confidential information, **do NOT upload them to GitHub**.  
 Each contributor must create their own credentials by following the steps below.
 
----
-
 # 1️⃣ Generate `GOOGLE_APPLICATION_CREDENTIALS`
 
 This is the path to your **Google Cloud Service Account JSON key**, used for BigQuery and Google Cloud authentication.
@@ -137,8 +135,6 @@ This is the path to your **Google Cloud Service Account JSON key**, used for Big
 
 14. Make sure `.gitignore` contains:
 
----
-
 # 2️⃣ Generate `SENDER_APP_PASSWORD` (Gmail App Password)
 
 This password is required for sending OTP emails from your Gmail account.
@@ -168,8 +164,6 @@ https://myaccount.google.com/apppasswords
 
 ---
 
-
----
 ## 🏗 Project Structure
 
 ```
