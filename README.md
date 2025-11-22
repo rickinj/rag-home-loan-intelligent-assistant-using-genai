@@ -104,8 +104,7 @@ This is the path to your **Google Cloud Service Account JSON key**, used for Big
 1. Go to **Google Cloud Console**  
    https://console.cloud.google.com/
 
-2. Select your project  
-   Example: `august-edge-475606-s9`
+2. Select your project 
 
 3. Open the sidebar → **IAM & Admin → Service Accounts**
 
