@@ -128,9 +128,9 @@ This is the path to your **Google Cloud Service Account JSON key**, used for Big
 
 11. Choose **JSON**, then download the file.
 
-12. Place it inside your project (but not tracked by Git): /credentials/service_account.json
+12. Place it inside your project.
 
-13. Add this into your `.env`: GOOGLE_APPLICATION_CREDENTIALS=credentials/service_account.json
+13. Add this into your `.env`: GOOGLE_APPLICATION_CREDENTIALS=path/to/service_account.json
 
 # 2️⃣ Generate `SENDER_APP_PASSWORD` (Gmail App Password)
 
